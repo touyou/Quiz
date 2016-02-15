@@ -21,12 +21,20 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         var tmpArray = [AnyObject]()
-        tmpArray.append(["flumpoolのギターは？","阪井一生","山村隆太","志村けん",1])
-        tmpArray.append(["お笑い界の重鎮といえば？","明石家さんま","野々村竜太郎","川谷絵音",1])
-        tmpArray.append(["SPECにも出演し朝ドラをきっかけにブレイクした女優といえば？","樹木希林","有村架純","澤穂希",2])
-        tmpArray.append(["今何問目？","0問目","10問目","わからない",3])
-        tmpArray.append(["さっきみたいな問題が出てくるのは？","東大入試","クイズ・タイムショック","ミリオネア",2])
-        tmpArray.append(["君にもアプリは？","作れる","作れない","そんなことよりお茶飲も？",1])
+        // 知識編: 6
+        tmpArray.append(["プログラミング言語Pythonの名前の由来となったとされるGuido van Rossumの大好きな番組といえば？","空飛ぶモンティ・パイソン","山登りモンティ・パイソン","宇宙に行くモンティ・パイソン",1])
+        tmpArray.append(["プログラミング言語Rubyを開発した日本のエンジニアと言えば？","まつもとゆきひろ","村上憲郎","橋本善久",1])
+        tmpArray.append(["プログラミング言語C++を布教する活動からC++を使う人達についた俗称といえば？","炎の軍団","闇の軍団","C.P.B.M.",2])
+        tmpArray.append(["プログラミング言語SwiftがAppleのアプリケーション開発用言語として発表されたのは？","WWDC2013","Apple Special Event2013","WWDC2014",3])
+        tmpArray.append(["『すごいH本』で有名な純粋関数型言語といえば？","Hadoop","Haskell","Lisp",2])
+        tmpArray.append(["一説にコーヒーに関するものが名前の由来となっているとされているAndroidアプリ開発言語としても有名なプログラミング言語といえば？","Fortran","Go","Java",3])
+        // iPhoneアプリ開発編: 6
+        tmpArray.append(["iPhoneアプリ開発においてコードを書く際、UI要素の前にかならず書かなければいけないのは？","@IBAction","@IBOutlet","@IBInspectable",2])
+        tmpArray.append(["Swiftにおいて配列の大きさを取得するために書くのは？",".count",".size",".length",1])
+        tmpArray.append(["iPhoneアプリ開発において画面遷移のことをなんと言う？","ChangeView","Segue","Move",2])
+        tmpArray.append(["","","","",])
+        tmpArray.append(["","","","",])
+        tmpArray.append(["","","","",])
         
         while (tmpArray.count > 0) {
             // let index = Int(arc4random_uniform(UInt32(tmpArray.count)))
