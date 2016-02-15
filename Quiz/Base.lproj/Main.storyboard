@@ -72,7 +72,7 @@
                         <outlet property="algoSwitch" destination="49L-aq-ngV" id="1mS-du-zab"/>
                         <outlet property="basicSwitch" destination="qvk-t4-yJk" id="bHQ-AN-wLk"/>
                         <outlet property="iphoneSwitch" destination="SYb-yB-SqO" id="LKJ-eU-qqD"/>
-                        <segue destination="9Gc-qn-BUV" kind="modal" identifier="toQuizView" id="hkP-5i-e5g"/>
+                        <segue destination="9Gc-qn-BUV" kind="modal" identifier="toQuizView" modalTransitionStyle="crossDissolve" id="hkP-5i-e5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                         <outlet property="choiceButtons2" destination="Q8c-og-E6F" id="Cxv-gc-ikB"/>
                         <outlet property="choiceButtons3" destination="0Sp-JL-eH5" id="PkJ-ID-YZL"/>
                         <outlet property="quizTextView" destination="toz-bB-d9Z" id="zjq-YB-2Q9"/>
-                        <segue destination="dKM-SQ-i7t" kind="modal" identifier="toResultView" id="bHO-ws-Ujh"/>
+                        <segue destination="dKM-SQ-i7t" kind="modal" identifier="toResultView" modalTransitionStyle="crossDissolve" id="bHO-ws-Ujh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAE-7h-Xpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,7 +177,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="dIu-zr-MEp"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="dIu-zr-MEp"/>
                                 </connections>
                             </button>
                         </subviews>

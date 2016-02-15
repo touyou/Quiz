@@ -60,38 +60,38 @@ class QuizViewController: UIViewController {
             tmpArray.append(["iPhoneアプリ開発において画面のデザインを行うファイルといえば？",
                 "デザインボード","ファンタジーボード","ストーリーボード",
                 3])
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
+            tmpArray.append(["起動した時にうつすViewをまるごと起動時の状態によって切り替えたい場合、どのファイルにその条件分岐を記述すればよい？",
+                "ViewController.swift","AppDelegate.swift","LanchScreen.storyboard",
+                2])
+            tmpArray.append(["SNS投稿機能を使いたい時にimportしなければならないライブラリと言えば？",
+                "Social","UIKit","Fabric",
+                1])
         }
         // アルゴリズム編: 6
         if algoIs {
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
-            tmpArray.append(["",
-                "","","",
-                ])
+            tmpArray.append(["再帰関数を用いて木の根をたどるように探索するアルゴリズムといえば？",
+                "深さ優先探索","幅優先探索","木の根探索",
+                1])
+            tmpArray.append(["最短経路を求めるアルゴリズムとして有名なもののうち、スタートから順に最短距離を確定させていくことでおこなうものは？",
+                "ベルマンフォード法","プリム法","ダイクストラ法",
+                3])
+            tmpArray.append(["漸化式をたてることで計算量を大幅に減らすことが出来るアルゴリズムの動的計画法、これの略称として一般的なものは？",
+                "DK","DP","MP",
+                2])
+            tmpArray.append(["プログラミングコンテストの攻略本として発行され、以降アルゴリズムの解説書として一般のプログラマにも人気となった秋葉拓哉、岩田陽一、北川宜稔著『プログラミングコンテストチャレンジブック』の俗称と言えば？",
+                "蟻本","雲丹本","猫本",
+                1])
+            tmpArray.append(["bitDPというアルゴリズムを使う問題をその代表的なものの名前をとってなんという？",
+                "巡回サービスマン問題","巡回セールスマン問題","巡回郵便局問題",
+                2])
+            tmpArray.append(["かつては日本に競技プログラミングを広める広告塔となり、日本初のプログラミングコンテスト運営会社であるAtCoder社を設立した人といえば？",
+                "高橋直大","高橋正三","高橋利幸",
+                1])
         }
         
         while (tmpArray.count > 0) {
-            // let index = Int(arc4random_uniform(UInt32(tmpArray.count)))
-            let index = Int(rand()) % tmpArray.count
+            let index = Int(arc4random_uniform(UInt32(tmpArray.count)))
+            // let index = Int(rand()) % tmpArray.count
             quizArray.append(tmpArray[index])
             tmpArray.removeAtIndex(index)
         }
