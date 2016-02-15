@@ -20,18 +20,60 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-dZ-IpZ">
                                 <rect key="frame" x="7" y="28" width="307" height="131"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qvk-t4-yJk">
+                                <rect key="frame" x="41" y="229" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeBasicSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2O2-JO-xxm"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-yB-SqO">
+                                <rect key="frame" x="41" y="268" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeIphoneSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amu-nU-Smj"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="49L-aq-ngV">
+                                <rect key="frame" x="41" y="307" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeAlgoSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccd-Mw-YcY"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-oC-GYG">
+                                <rect key="frame" x="98" y="229" width="182" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhoneアプリ開発編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72p-BT-DQq">
+                                <rect key="frame" x="98" y="268" width="182" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アルゴリズム知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-y6-Cql">
+                                <rect key="frame" x="98" y="307" width="182" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGQ-bf-qb1">
-                                <rect key="frame" x="20" y="372" width="280" height="115"/>
+                                <rect key="frame" x="20" y="401" width="280" height="115"/>
                                 <state key="normal" image="start.png">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9Gc-qn-BUV" kind="modal" id="Jv5-Fi-aZl"/>
+                                    <action selector="pushStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLo-eS-Sgc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="algoSwitch" destination="49L-aq-ngV" id="1mS-du-zab"/>
+                        <outlet property="basicSwitch" destination="qvk-t4-yJk" id="bHQ-AN-wLk"/>
+                        <outlet property="iphoneSwitch" destination="SYb-yB-SqO" id="LKJ-eU-qqD"/>
+                        <segue destination="9Gc-qn-BUV" kind="modal" identifier="toQuizView" id="hkP-5i-e5g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
