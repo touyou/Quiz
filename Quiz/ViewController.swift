@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var basicSwitch: UISwitch!
     @IBOutlet weak var iphoneSwitch: UISwitch!
     @IBOutlet weak var algoSwitch: UISwitch!
+    // Google Ads関連
+    @IBOutlet var bannerView: GADBannerView!
+    
     var basicIs: Bool = false
     var iphoneIs: Bool = false
     var algoIs: Bool = false
@@ -23,6 +27,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Google Ads関連
+        self.bannerView.adSize = kGADAdSizeSmartBannerPortrait
+        // for test
+        self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        // for sale
+        // self.bannerView.adUnitID = ""
+        self.bannerView.rootViewController = self
+        self.bannerView.loadRequest(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,44 +22,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-dZ-IpZ">
                                 <rect key="frame" x="146" y="15" width="309" height="126"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-KO-Jc5" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="510" width="600" height="90"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="eE5-K8-QiB"/>
+                                </constraints>
+                            </view>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qvk-t4-yJk">
-                                <rect key="frame" x="166" y="325" width="51" height="31"/>
+                                <rect key="frame" x="166" y="245" width="51" height="31"/>
                                 <connections>
                                     <action selector="changeBasicSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2O2-JO-xxm"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-yB-SqO">
-                                <rect key="frame" x="166" y="364" width="51" height="31"/>
+                                <rect key="frame" x="166" y="284" width="51" height="31"/>
                                 <connections>
                                     <action selector="changeIphoneSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amu-nU-Smj"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="49L-aq-ngV">
-                                <rect key="frame" x="166" y="403" width="51" height="31"/>
+                                <rect key="frame" x="166" y="323" width="51" height="31"/>
                                 <connections>
                                     <action selector="changeAlgoSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccd-Mw-YcY"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-oC-GYG">
-                                <rect key="frame" x="223" y="330" width="51" height="20.5"/>
+                                <rect key="frame" x="223" y="250.5" width="51" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneアプリ開発編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72p-BT-DQq">
-                                <rect key="frame" x="223" y="369" width="154.5" height="20.5"/>
+                                <rect key="frame" x="223" y="289.5" width="154.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アルゴリズム知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-y6-Cql">
-                                <rect key="frame" x="223" y="408" width="153" height="20.5"/>
+                                <rect key="frame" x="223" y="328.5" width="153" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGQ-bf-qb1">
-                                <rect key="frame" x="160" y="454" width="280" height="126"/>
+                                <rect key="frame" x="160" y="374" width="280" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="0aP-jp-a3S"/>
                                 </constraints>
@@ -76,13 +83,15 @@
                             <constraint firstItem="Egh-dZ-IpZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1u4-qf-Tab"/>
                             <constraint firstItem="vQ3-oC-GYG" firstAttribute="leading" secondItem="qvk-t4-yJk" secondAttribute="trailing" constant="8" id="44m-3I-1W1"/>
                             <constraint firstItem="qvk-t4-yJk" firstAttribute="centerY" secondItem="vQ3-oC-GYG" secondAttribute="centerY" id="51S-lL-6G1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pQU-KO-Jc5" secondAttribute="bottom" id="6xW-47-8oI"/>
                             <constraint firstItem="TGQ-bf-qb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9RN-cn-0fI"/>
                             <constraint firstItem="3c9-y6-Cql" firstAttribute="leading" secondItem="49L-aq-ngV" secondAttribute="trailing" constant="8" id="DAI-TT-Q7P"/>
                             <constraint firstItem="49L-aq-ngV" firstAttribute="centerY" secondItem="3c9-y6-Cql" secondAttribute="centerY" id="DXS-X7-cUz"/>
                             <constraint firstItem="Egh-dZ-IpZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="HLb-Sg-Ozn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TGQ-bf-qb1" secondAttribute="bottom" constant="20" id="NoV-Sr-nJs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pQU-KO-Jc5" secondAttribute="trailing" constant="-20" id="Njr-2g-uLL"/>
                             <constraint firstItem="49L-aq-ngV" firstAttribute="leading" secondItem="SYb-yB-SqO" secondAttribute="leading" id="VId-eo-n21"/>
                             <constraint firstItem="72p-BT-DQq" firstAttribute="leading" secondItem="SYb-yB-SqO" secondAttribute="trailing" constant="8" id="bwb-y5-Inb"/>
+                            <constraint firstItem="pQU-KO-Jc5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cuP-AF-sUI"/>
                             <constraint firstItem="qvk-t4-yJk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Egh-dZ-IpZ" secondAttribute="bottom" constant="20" id="evG-8f-ZiB"/>
                             <constraint firstItem="SYb-yB-SqO" firstAttribute="leading" secondItem="qvk-t4-yJk" secondAttribute="leading" id="fIr-uw-dBB"/>
                             <constraint firstItem="SYb-yB-SqO" firstAttribute="centerY" secondItem="72p-BT-DQq" secondAttribute="centerY" id="nol-5X-8wS"/>
@@ -90,10 +99,12 @@
                             <constraint firstItem="qvk-t4-yJk" firstAttribute="leading" secondItem="Egh-dZ-IpZ" secondAttribute="leading" constant="20" id="vv8-Zb-Ly1"/>
                             <constraint firstItem="SYb-yB-SqO" firstAttribute="top" secondItem="qvk-t4-yJk" secondAttribute="bottom" constant="8" id="wP9-zk-V8O"/>
                             <constraint firstItem="TGQ-bf-qb1" firstAttribute="top" secondItem="49L-aq-ngV" secondAttribute="bottom" constant="20" id="wSc-RA-rIx"/>
+                            <constraint firstItem="pQU-KO-Jc5" firstAttribute="top" secondItem="TGQ-bf-qb1" secondAttribute="bottom" constant="10" id="znI-iQ-wxu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="algoSwitch" destination="49L-aq-ngV" id="1mS-du-zab"/>
+                        <outlet property="bannerView" destination="pQU-KO-Jc5" id="DQJ-6C-rwX"/>
                         <outlet property="basicSwitch" destination="qvk-t4-yJk" id="bHQ-AN-wLk"/>
                         <outlet property="iphoneSwitch" destination="SYb-yB-SqO" id="LKJ-eU-qqD"/>
                         <segue destination="kte-fe-GKM" kind="modal" identifier="toQuizView" id="Mzf-Nq-WGf"/>
@@ -143,7 +154,7 @@
                                     <action selector="choiceAnswer:" destination="9Gc-qn-BUV" eventType="touchUpInside" id="fKw-8o-tJb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-Hu-EF9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-Hu-EF9">
                                 <rect key="frame" x="145" y="15" width="309" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ihX-Hu-EF9" secondAttribute="height" multiplier="103:42" id="CKV-sG-Ec3"/>
@@ -163,7 +174,7 @@
                                     <action selector="choiceAnswer:" destination="9Gc-qn-BUV" eventType="touchUpInside" id="Zb6-N4-V6V"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここに問題が表示" translatesAutoresizingMaskIntoConstraints="NO" id="toz-bB-d9Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="ここに問題が表示" translatesAutoresizingMaskIntoConstraints="NO" id="toz-bB-d9Z">
                                 <rect key="frame" x="0.0" y="141" width="560" height="150"/>
                                 <color key="backgroundColor" red="0.031372549019607843" green="0.015686274509803921" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -248,7 +259,7 @@
                                 <color key="textColor" red="0.62745098039215685" green="0.0" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-Jq-aBb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-Jq-aBb">
                                 <rect key="frame" x="146" y="4" width="309" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fgo-Jq-aBb" secondAttribute="height" multiplier="103:42" id="Jqy-aC-6Nc"/>
