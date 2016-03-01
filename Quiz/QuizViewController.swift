@@ -21,11 +21,24 @@ class QuizViewController: UIViewController {
     var iphoneIs: Bool = false
     var algoIs: Bool = false
 
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if saveData.objectForKey("basic") != nil {
+            basicIs = saveData.objectForKey("basic") as! Bool
+        }
+        if saveData.objectForKey("iphone") != nil {
+            iphoneIs = saveData.objectForKey("iphone") as! Bool
+        }
+        if saveData.objectForKey("algo") != nil {
+            algoIs = saveData.objectForKey("algo") as! Bool
+        }
+        
         var tmpArray = [AnyObject]()
-        // 知識編: 6
+        // 知識編: 10
         if basicIs {
             tmpArray.append(["プログラミング言語Pythonの名前の由来となったとされるGuido van Rossumの大好きな番組といえば？",
                 "空飛ぶモンティ・パイソン","山登りモンティ・パイソン","宇宙に行くモンティ・パイソン",
@@ -45,8 +58,20 @@ class QuizViewController: UIViewController {
             tmpArray.append(["一説にコーヒーに関するものが名前の由来となっているとされているAndroidアプリ開発言語としても有名なプログラミング言語といえば？",
                 "Fortran","Go","Java",
                 3])
+            tmpArray.append(["Appleの創業者のうちSteve Jobsじゃない方は？",
+                "スティーブ・ウォズニアック","スティーブ・ジョンソン","スティーブ・ポッター",
+                1])
+            tmpArray.append(["日本語で書けるプログラミング言語として実在するものは？",
+                "あさがお","なでしこ","くのいち",
+                2])
+            tmpArray.append(["Unity独自の言語であるBooのもととなっているプログラミング言語は？",
+                "Lisp","Ruby","Python",
+                3])
+            tmpArray.append(["Go言語はどこの会社の言語？",
+                "Microsoft","Google","Adobe",
+                2])
         }
-        // iPhoneアプリ開発編: 6
+        // iPhoneアプリ開発編: 10
         if iphoneIs {
             tmpArray.append(["iPhoneアプリ開発においてコードを書く際、UI要素の前にかならず書かなければいけないのは？",
                 "@IBAction","@IBOutlet","@IBInspectable",
@@ -66,8 +91,20 @@ class QuizViewController: UIViewController {
             tmpArray.append(["SNS投稿機能を使いたい時にimportしなければならないライブラリと言えば？",
                 "Social","UIKit","Fabric",
                 1])
+            tmpArray.append(["iPhoneアプリ開発の統合開発環境といえば？",
+                "Xcode","Atom","Visual Studio",
+                1])
+            tmpArray.append(["Labelのコード上での型名は？",
+                "UITextLabel","UILabel","UILavelView",
+                2])
+            tmpArray.append(["CollectionViewのコード上での型名は？",
+                "UICollectionViewController","UICollectionViewDelegate","UICollectionView",
+                3])
+            tmpArray.append(["iPhoneアプリ開発においてコードを書く時、ボタンをおした時の処理などを記述する関数に必ずつけるものといえば？",
+                "@IBAction","@IBInspectable","@IBDesignable",
+                1])
         }
-        // アルゴリズム編: 6
+        // アルゴリズム編: 7
         if algoIs {
             tmpArray.append(["再帰関数を用いて木の根をたどるように探索するアルゴリズムといえば？",
                 "深さ優先探索","幅優先探索","木の根探索",
@@ -86,6 +123,9 @@ class QuizViewController: UIViewController {
                 2])
             tmpArray.append(["かつては日本に競技プログラミングを広める広告塔となり、日本初のプログラミングコンテスト運営会社であるAtCoder社を設立した人といえば？",
                 "高橋直大","高橋正三","高橋利幸",
+                1])
+            tmpArray.append(["囲碁などのAIにつかわれる乱数を利用したアルゴリズムといえば？",
+                "モンテカルロ法","カルテモンロ法","メルセンヌ法",
                 1])
         }
         

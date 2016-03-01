@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		463E8F841C5F9EC6007A0E24 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E8F831C5F9EC6007A0E24 /* ResultViewController.swift */; };
+		464A7EE81C797355006100DB /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 464A7EE61C797355006100DB /* Default-667h@2x.png */; };
+		464A7EE91C797355006100DB /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 464A7EE71C797355006100DB /* Default-736h@3x.png */; };
 		468382161C717CC7001DC810 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 468382151C717CC7001DC810 /* start.png */; };
 		4683821A1C7185C4001DC810 /* programming_quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 468382191C7185C4001DC810 /* programming_quiz.png */; };
 		4683821C1C718F73001DC810 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4683821B1C718F73001DC810 /* Default-568h@2x.png */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		463E8F831C5F9EC6007A0E24 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		464A7EE61C797355006100DB /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		464A7EE71C797355006100DB /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		468382151C717CC7001DC810 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		468382191C7185C4001DC810 /* programming_quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = programming_quiz.png; sourceTree = "<group>"; };
 		4683821B1C718F73001DC810 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				4683821B1C718F73001DC810 /* Default-568h@2x.png */,
+				464A7EE61C797355006100DB /* Default-667h@2x.png */,
+				464A7EE71C797355006100DB /* Default-736h@3x.png */,
 				46D971C41C5E55D500A742A9 /* Quiz */,
 				46D971D91C5E55D500A742A9 /* QuizTests */,
 				46D971E41C5E55D500A742A9 /* QuizUITests */,
@@ -270,6 +276,7 @@
 			files = (
 				4683821C1C718F73001DC810 /* Default-568h@2x.png in Resources */,
 				4683821A1C7185C4001DC810 /* programming_quiz.png in Resources */,
+				464A7EE81C797355006100DB /* Default-667h@2x.png in Resources */,
 				468382161C717CC7001DC810 /* start.png in Resources */,
 				46D971D01C5E55D500A742A9 /* LaunchScreen.storyboard in Resources */,
 				468382251C719FC9001DC810 /* Icon-40@2x.png in Resources */,
@@ -280,6 +287,7 @@
 				468382261C719FC9001DC810 /* Icon-40@3x.png in Resources */,
 				46D971CB1C5E55D500A742A9 /* Main.storyboard in Resources */,
 				468382291C719FC9001DC810 /* Icon-Small@2x.png in Resources */,
+				464A7EE91C797355006100DB /* Default-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,9 +455,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Quiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.touyou.Quiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zatunen.touyou.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -458,9 +467,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = Quiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.touyou.Quiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zatunen.touyou.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

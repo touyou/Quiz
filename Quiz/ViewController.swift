@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var iphoneIs: Bool = false
     var algoIs: Bool = false
     
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,10 +51,9 @@ class ViewController: UIViewController {
     // セグエで移る前に代入
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toQuizView") {
-            let quizView = segue.destinationViewController as! QuizViewController
-            quizView.basicIs = self.basicIs
-            quizView.iphoneIs = self.iphoneIs
-            quizView.algoIs = self.algoIs
+            saveData.setObject(self.basicIs, forKey: "basic")
+            saveData.setObject(self.iphoneIs, forKey: "iphone")
+            saveData.setObject(self.algoIs, forKey: "algo")
         }
     }
     // 単純なアラートをつくる関数
@@ -62,15 +63,4 @@ class ViewController: UIViewController {
         alertController.addAction(defaultAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
