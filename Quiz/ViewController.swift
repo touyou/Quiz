@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         // Google Ads関連
         self.bannerView.adSize = kGADAdSizeSmartBannerPortrait
         // for test
-        self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        // self.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         // for sale
-        // self.bannerView.adUnitID = ""
+        self.bannerView.adUnitID = "ca-app-pub-2853999389157478/2042602869"
         self.bannerView.rootViewController = self
         self.bannerView.loadRequest(GADRequest())
     }
