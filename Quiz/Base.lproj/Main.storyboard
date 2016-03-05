@@ -48,19 +48,19 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-oC-GYG">
-                                <rect key="frame" x="223" y="250.5" width="51" height="20.5"/>
+                                <rect key="frame" x="223" y="250" width="51" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneアプリ開発編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72p-BT-DQq">
-                                <rect key="frame" x="223" y="289.5" width="154.5" height="20.5"/>
+                                <rect key="frame" x="223" y="289" width="154.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アルゴリズム知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-y6-Cql">
-                                <rect key="frame" x="223" y="328.5" width="153" height="20.5"/>
+                                <rect key="frame" x="223" y="328" width="153" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                     <action selector="choiceAnswer:" destination="9Gc-qn-BUV" eventType="touchUpInside" id="fKw-8o-tJb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-Hu-EF9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-Hu-EF9">
                                 <rect key="frame" x="145" y="15" width="309" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ihX-Hu-EF9" secondAttribute="height" multiplier="103:42" id="CKV-sG-Ec3"/>
@@ -174,7 +174,7 @@
                                     <action selector="choiceAnswer:" destination="9Gc-qn-BUV" eventType="touchUpInside" id="Zb6-N4-V6V"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="ここに問題が表示" translatesAutoresizingMaskIntoConstraints="NO" id="toz-bB-d9Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここに問題が表示" translatesAutoresizingMaskIntoConstraints="NO" id="toz-bB-d9Z">
                                 <rect key="frame" x="0.0" y="141" width="560" height="150"/>
                                 <color key="backgroundColor" red="0.031372549019607843" green="0.015686274509803921" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -259,7 +259,7 @@
                                 <color key="textColor" red="0.62745098039215685" green="0.0" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-Jq-aBb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programming_quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-Jq-aBb">
                                 <rect key="frame" x="146" y="4" width="309" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fgo-Jq-aBb" secondAttribute="height" multiplier="103:42" id="Jqy-aC-6Nc"/>
