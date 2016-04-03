@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -50,13 +50,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-oC-GYG">
                                 <rect key="frame" x="223" y="250" width="51" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhoneアプリ開発編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72p-BT-DQq">
                                 <rect key="frame" x="223" y="289" width="154.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アルゴリズム知識編" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-y6-Cql">
@@ -107,7 +107,7 @@
                         <outlet property="bannerView" destination="pQU-KO-Jc5" id="DQJ-6C-rwX"/>
                         <outlet property="basicSwitch" destination="qvk-t4-yJk" id="bHQ-AN-wLk"/>
                         <outlet property="iphoneSwitch" destination="SYb-yB-SqO" id="LKJ-eU-qqD"/>
-                        <segue destination="kte-fe-GKM" kind="modal" identifier="toQuizView" id="Mzf-Nq-WGf"/>
+                        <segue destination="kte-fe-GKM" kind="presentation" identifier="toQuizView" id="Mzf-Nq-WGf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -218,7 +218,7 @@
                         <outlet property="choiceButtons2" destination="Q8c-og-E6F" id="Cxv-gc-ikB"/>
                         <outlet property="choiceButtons3" destination="0Sp-JL-eH5" id="PkJ-ID-YZL"/>
                         <outlet property="quizTextView" destination="toz-bB-d9Z" id="zjq-YB-2Q9"/>
-                        <segue destination="dKM-SQ-i7t" kind="push" identifier="toResultView" id="bcD-jo-uyP"/>
+                        <segue destination="dKM-SQ-i7t" kind="show" identifier="toResultView" id="bcD-jo-uyP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAE-7h-Xpn" userLabel="First Responder" sceneMemberID="firstResponder"/>

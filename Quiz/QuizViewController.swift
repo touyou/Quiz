@@ -140,16 +140,16 @@ class QuizViewController: UIViewController {
     
     // 選択したクイズの問題文と選択肢の表示
     func choiceQuiz() {
-        quizTextView.text = quizArray[0][0] as! String
-        choiceButtons1.setTitle(quizArray[0][1] as? String, forState: .Normal)
-        choiceButtons2.setTitle(quizArray[0][2] as? String, forState: .Normal)
-        choiceButtons3.setTitle(quizArray[0][3] as? String, forState: .Normal)
+        quizTextView.text = (quizArray[0] as! NSArray)[0] as! String
+        choiceButtons1.setTitle((quizArray[0] as! NSArray)[1] as? String, forState: .Normal)
+        choiceButtons2.setTitle((quizArray[0] as! NSArray)[2] as? String, forState: .Normal)
+        choiceButtons3.setTitle((quizArray[0] as! NSArray)[3] as? String, forState: .Normal)
     }
 
     // ユーザーの押した選択肢が正解かどうか
     @IBAction func choiceAnswer(sender: UIButton) {
-        if quizArray[0][4] as! Int == sender.tag {
-            correctAnswer++
+        if (quizArray[0] as! NSArray)[4] as! Int == sender.tag {
+            correctAnswer += 1
         }
         quizArray.removeAtIndex(0)
         if quizArray.count == 0 {
