@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var iphoneIs: Bool = false
     var algoIs: Bool = false
     
-    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    let saveData: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         // for sale
         self.bannerView.adUnitID = "ca-app-pub-2853999389157478/2042602869"
         self.bannerView.rootViewController = self
-        self.bannerView.loadRequest(GADRequest())
+        self.bannerView.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,36 +43,36 @@ class ViewController: UIViewController {
     }
     
     // Switchの状態に応じて問題を切り替える
-    @IBAction func changeBasicSwitch(sender: UISwitch) {
-        basicIs = basicSwitch.on
+    @IBAction func changeBasicSwitch(_ sender: UISwitch) {
+        basicIs = basicSwitch.isOn
     }
-    @IBAction func changeIphoneSwitch(sender: UISwitch) {
-        iphoneIs = iphoneSwitch.on
+    @IBAction func changeIphoneSwitch(_ sender: UISwitch) {
+        iphoneIs = iphoneSwitch.isOn
     }
-    @IBAction func changeAlgoSwitch(sender: UISwitch) {
-        algoIs = algoSwitch.on
+    @IBAction func changeAlgoSwitch(_ sender: UISwitch) {
+        algoIs = algoSwitch.isOn
     }
     // どれか選択していないと遷移しないようにする
-    @IBAction func pushStartButton(sender: UIButton) {
+    @IBAction func pushStartButton(_ sender: UIButton) {
         if (basicIs||iphoneIs||algoIs) {
-            performSegueWithIdentifier("toQuizView", sender: nil)
+            performSegue(withIdentifier: "toQuizView", sender: nil)
         } else {
             simpleAlert("いずれか一つは必ず選択してください。")
         }
     }
     // セグエで移る前に代入
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toQuizView") {
-            saveData.setObject(self.basicIs, forKey: "basic")
-            saveData.setObject(self.iphoneIs, forKey: "iphone")
-            saveData.setObject(self.algoIs, forKey: "algo")
+            saveData.set(self.basicIs, forKey: "basic")
+            saveData.set(self.iphoneIs, forKey: "iphone")
+            saveData.set(self.algoIs, forKey: "algo")
         }
     }
     // 単純なアラートをつくる関数
-    func simpleAlert(titleString: String) {
-        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+    func simpleAlert(_ titleString: String) {
+        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 }

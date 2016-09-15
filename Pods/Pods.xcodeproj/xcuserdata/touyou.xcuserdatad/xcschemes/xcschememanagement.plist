@@ -9,10 +9,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-QuizTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-QuizUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0ACAE475E480FA7F99A8C041172C5446</key>
+		<key>9BD215E7B81E5DB53F4EA5DEF9285155</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A62735756761628CC5DAD3FB90328194</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C76AA36604650A2FE7ABE7BFFE04908C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,7 +10,7 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
-    var quizArray = [AnyObject]()
+    var quizArray = [Any]()
     var correctAnswer:Int = 0
     @IBOutlet var quizTextView: UITextView!
     @IBOutlet var choiceButtons1: UIButton!
@@ -21,23 +21,23 @@ class QuizViewController: UIViewController {
     var iphoneIs: Bool = false
     var algoIs: Bool = false
 
-    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    let saveData: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if saveData.objectForKey("basic") != nil {
-            basicIs = saveData.objectForKey("basic") as! Bool
+        if saveData.object(forKey: "basic") != nil {
+            basicIs = saveData.object(forKey: "basic") as! Bool
         }
-        if saveData.objectForKey("iphone") != nil {
-            iphoneIs = saveData.objectForKey("iphone") as! Bool
+        if saveData.object(forKey: "iphone") != nil {
+            iphoneIs = saveData.object(forKey: "iphone") as! Bool
         }
-        if saveData.objectForKey("algo") != nil {
-            algoIs = saveData.objectForKey("algo") as! Bool
+        if saveData.object(forKey: "algo") != nil {
+            algoIs = saveData.object(forKey: "algo") as! Bool
         }
         
-        var tmpArray = [AnyObject]()
+        var tmpArray = [Any]()
         // 知識編: 10
         if basicIs {
             tmpArray.append(["プログラミング言語Pythonの名前の由来となったとされるGuido van Rossumの大好きな番組といえば？",
@@ -133,7 +133,7 @@ class QuizViewController: UIViewController {
             let index = Int(arc4random_uniform(UInt32(tmpArray.count)))
             // let index = Int(rand()) % tmpArray.count
             quizArray.append(tmpArray[index])
-            tmpArray.removeAtIndex(index)
+            tmpArray.remove(at: index)
         }
         choiceQuiz()
     }
@@ -141,17 +141,17 @@ class QuizViewController: UIViewController {
     // 選択したクイズの問題文と選択肢の表示
     func choiceQuiz() {
         quizTextView.text = (quizArray[0] as! NSArray)[0] as! String
-        choiceButtons1.setTitle((quizArray[0] as! NSArray)[1] as? String, forState: .Normal)
-        choiceButtons2.setTitle((quizArray[0] as! NSArray)[2] as? String, forState: .Normal)
-        choiceButtons3.setTitle((quizArray[0] as! NSArray)[3] as? String, forState: .Normal)
+        choiceButtons1.setTitle((quizArray[0] as! NSArray)[1] as? String, for: UIControlState())
+        choiceButtons2.setTitle((quizArray[0] as! NSArray)[2] as? String, for: UIControlState())
+        choiceButtons3.setTitle((quizArray[0] as! NSArray)[3] as? String, for: UIControlState())
     }
 
     // ユーザーの押した選択肢が正解かどうか
-    @IBAction func choiceAnswer(sender: UIButton) {
+    @IBAction func choiceAnswer(_ sender: UIButton) {
         if (quizArray[0] as! NSArray)[4] as! Int == sender.tag {
             correctAnswer += 1
         }
-        quizArray.removeAtIndex(0)
+        quizArray.remove(at: 0)
         if quizArray.count == 0 {
             performSegueToResult()
         } else {
@@ -161,13 +161,13 @@ class QuizViewController: UIViewController {
     
     // Resultviewへ
     func performSegueToResult() {
-        performSegueWithIdentifier("toResultView", sender: nil)
+        performSegue(withIdentifier: "toResultView", sender: nil)
     }
     
     // ResultViewにいくSegueが実行された時に正解数を渡す
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toResultView") {
-            let resultView = segue.destinationViewController as! ResultViewController
+            let resultView = segue.destination as! ResultViewController
             resultView.correctAnswer = self.correctAnswer
         }
     }
