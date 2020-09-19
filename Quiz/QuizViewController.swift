@@ -10,7 +10,7 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
-    var quizArray = [Any]()
+    var quizArray = [[Any]]()
     var correctAnswer:Int = 0
     @IBOutlet var quizTextView: UITextView!
     @IBOutlet var choiceButtons1: UIButton!
@@ -37,7 +37,7 @@ class QuizViewController: UIViewController {
             algoIs = saveData.object(forKey: "algo") as! Bool
         }
         
-        var tmpArray = [Any]()
+        var tmpArray = [[Any]]()
         // 知識編: 10
         if basicIs {
             tmpArray.append(["プログラミング言語Pythonの名前の由来となったとされるGuido van Rossumの大好きな番組といえば？",
@@ -129,26 +129,21 @@ class QuizViewController: UIViewController {
                 1])
         }
         
-        while (tmpArray.count > 0) {
-            let index = Int(arc4random_uniform(UInt32(tmpArray.count)))
-            // let index = Int(rand()) % tmpArray.count
-            quizArray.append(tmpArray[index])
-            tmpArray.remove(at: index)
-        }
+        quizArray = tmpArray.shuffled()
         choiceQuiz()
     }
     
     // 選択したクイズの問題文と選択肢の表示
     func choiceQuiz() {
-        quizTextView.text = (quizArray[0] as! NSArray)[0] as! String
-        choiceButtons1.setTitle((quizArray[0] as! NSArray)[1] as? String, for: UIControlState())
-        choiceButtons2.setTitle((quizArray[0] as! NSArray)[2] as? String, for: UIControlState())
-        choiceButtons3.setTitle((quizArray[0] as! NSArray)[3] as? String, for: UIControlState())
+        quizTextView.text = quizArray[0][0] as? String
+        choiceButtons1.setTitle(quizArray[0][1] as? String, for: .normal)
+        choiceButtons2.setTitle(quizArray[0][2] as? String, for: .normal)
+        choiceButtons3.setTitle(quizArray[0][3] as? String, for: .normal)
     }
 
     // ユーザーの押した選択肢が正解かどうか
     @IBAction func choiceAnswer(_ sender: UIButton) {
-        if (quizArray[0] as! NSArray)[4] as! Int == sender.tag {
+        if quizArray[0][4] as! Int == sender.tag {
             correctAnswer += 1
         }
         quizArray.remove(at: 0)
@@ -171,12 +166,5 @@ class QuizViewController: UIViewController {
             resultView.correctAnswer = self.correctAnswer
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
